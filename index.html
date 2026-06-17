@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edunation Express</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f5f8ff;overflow-x:hidden}
+.banner{background:#ff8c00;color:#fff;text-align:center;padding:10px;font-weight:600}
+header{background:linear-gradient(135deg,#003366,#007bff);color:#fff;padding:80px 10%;text-align:center}
+header h1{font-size:3rem}
+.btn{display:inline-block;padding:14px 30px;background:#fff;color:#003366;border-radius:30px;margin-top:25px;text-decoration:none}
+section{padding:70px 10%}
+.section-title{text-align:center;font-size:2.2rem;margin-bottom:40px;color:#0b0541d5}
+.tabs{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.tab-btn{padding:15px 25px;border:none;background:#302c72;color:#fff;border-radius:10px;cursor:pointer}
+.tab-content{display:none;background:#fff;padding:30px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+.tab-content.active{display:block}
+.course-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.course-card,.info-card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+.form-box{max-width:600px;margin:auto;background:#fff;padding:40px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+input,select,button{width:100%;padding:14px;margin:10px 0;border-radius:10px;border:1px solid #ccc}
+button{background:#007bff;color:#fff;border:none}
+footer{background:#003366;color:#fff;text-align:center;padding:25px}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 20px;border-radius:50px;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="banner">🎓 Admissions Open • Free Demo Classes Available</div>
+
+<header>
+<h1>Edunation Express</h1>
+<p>Beyond Tuition, Towards Success</p>
+<a href="#register" class="btn">Book Free Demo Class</a>
+</header>
+
+<section>
+<h2 class="section-title">About Us</h2>
+<div class="info-card">
+At Edunation Express, we believe that every student has the potential to excel with the right guidance and support. Our goal is to provide quality online education through interactive learning, personalized attention, and practical skill development.
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Our Courses</h2>
+<div class="tabs">
+<button class="tab-btn" onclick="openTab('tab1')">Primary Foundation</button>
+<button class="tab-btn" onclick="openTab('tab2')">Commerce & Humanities</button>
+<button class="tab-btn" onclick="openTab('tab3')">Skill Programs</button>
+</div>
+
+<div id="tab1" class="tab-content active"><div class="course-list">
+<div class="course-card"><h3>Class 1-8</h3><p>All Subjects</p></div>
+<div class="course-card"><h3>Speed Math</h3></div>
+<div class="course-card"><h3>Vedic Math</h3></div></div></div>
+
+<div id="tab2" class="tab-content"><div class="course-list">
+<div class="course-card"><h3>Economics</h3></div>
+<div class="course-card"><h3>Business Studies</h3></div></div></div>
+
+<div id="tab3" class="tab-content"><div class="course-list">
+<div class="course-card"><h3>HOTS</h3></div>
+<div class="course-card"><h3>Coding For Kids (8-14)</h3></div>
+<div class="course-card"><h3>Spoken English & Communication Skills</h3></div></div></div>
+</section>
+
+<section>
+<h2 class="section-title">Why Choose Us</h2>
+<div class="course-list">
+<div class="info-card">Experienced Faculty</div>
+<div class="info-card">Small Batch Size</div>
+<div class="info-card">Personalized Learning</div>
+<div class="info-card">Regular Assessments</div>
+</div>
+</section>
+
+<section id="register">
+<h2 class="section-title">Register For Free Demo</h2>
+<div class="form-box">
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<form
+id="demoForm"
+action="https://script.google.com/macros/s/AKfycbyIRDUWCtN1cFTeWBgd89NyMLJ4jmkUBGdZ3nKUkhuMpZTCSb5yHG_T_d-IddDGLh9l/exec"
+method="POST"
+target="hidden_iframe"
+autocomplete="off">
+<input type="text" name="studentName" placeholder="Student Name" required autocomplete="off">
+<input type="tel" name="phone" placeholder="Phone Number" required autocomplete="off">
+<input type="email" name="email" placeholder="Email Address" required autocomplete="off">
+<select name="course" required>
+<option value="">Select Course</option>
+<option>Primary Foundation</option>
+<option>Commerce & Humanities</option>
+<option>Skill Programs</option>
+</select>
+<button type="submit">Book Demo Class</button>
+</form>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">FAQ</h2>
+<div class="info-card"><b>Is demo class free?</b><br>Yes.</div><br>
+<div class="info-card"><b>Are classes online?</b><br>Yes, via Google Meet & Zoom.</div>
+</section>
+
+<footer>
+<h3>Edunation Express</h3>
+<p>Beyond Tuition, Towards Success</p>
+<p>Email: heeralakhera@gmail.com</p>
+<p>WhatsApp: +91 7247833278</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917247833278">WhatsApp</a>
+
+<script>
+function openTab(id){
+document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+
+document.getElementById('demoForm').addEventListener('submit', function() {
+
+  setTimeout(function() {
+
+    alert('Thank you for registering with Edunation Express. Our team will contact you shortly.');
+
+    document.getElementById('demoForm').reset();
+
+  }, 1500);
+
+});
+</script>
+</body>
+</html>
